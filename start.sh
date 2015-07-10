@@ -49,4 +49,4 @@ vtajzich/mesosphere-docker-mesos-master:latest
 
 echo "Starting yowie"
 
-docker run -d --name yowie --net=host -p 8080:8080 -e "LIBPROCESS_IP="${DOCKER_IP}"" -e "mesos.url="${DOCKER_IP}"" -e "yowie.framework.externalUrl=http://"${DOCKER_IP}":8080" vendavo/yowie:0.1.2
+docker run -d --name yowie --net=host -p 8080:8080 -e "LIBPROCESS_IP="${DOCKER_IP}"" -e "mesos.url="${DOCKER_IP}"" -e "yowie.framework.externalUrl=http://"${DOCKER_IP}":8080" vendavo/yowie:0.1.3
