@@ -10,7 +10,7 @@ Content-Type: application/json
             "cpus": 0.5,
             "mem": 256,
             "container": {
-                "image": "vtajzich/yowie-demo_mysql",
+                "image": "vtajzich/yowie-demo:mysql",
                 "network": "HOST"
             },
             "env": {

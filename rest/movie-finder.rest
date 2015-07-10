@@ -10,7 +10,7 @@ Content-Type: application/json
             "cpus": 1,
             "mem": 128,
             "container": {
-                "image": "vtajzich/yowie-demo_movie-finder",
+                "image": "vtajzich/yowie-demo:movie-finder",
                 "network": "BRIDGE",
                 "portMappings": [
                     {

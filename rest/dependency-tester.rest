@@ -14,7 +14,7 @@ Content-Type: application/json
       "cpus": 1,
       "mem": 64,
       "container": {
-        "image": "vtajzich/yowie-dep-tester:v1",
+        "image": "vtajzich/yowie-demo:dependency-tester",
         "network": "BRIDGE",
         "privileged": true,
         "portMappings": [
@@ -33,7 +33,7 @@ Content-Type: application/json
       "cpus": 1,
       "mem": 64,
       "container": {
-        "image": "vtajzich/yowie-dep-tester:v1",
+        "image": "vtajzich/yowie-demo:dependency-tester",
         "network": "BRIDGE",
         "portMappings": [
           {"containerPort": 8080, "hostPort": 31102}
@@ -52,7 +52,7 @@ Content-Type: application/json
       "cpus": 1,
       "mem": 64,
       "container": {
-        "image": "vtajzich/yowie-dep-tester:v1",
+        "image": "vtajzich/yowie-demo:dependency-tester",
         "network": "BRIDGE",
         "portMappings": [
           {"containerPort": 8080, "hostPort": 31103}
@@ -71,7 +71,7 @@ Content-Type: application/json
       "cpus": 1,
       "mem": 64,
       "container": {
-        "image": "vtajzich/yowie-dep-tester:v1",
+        "image": "vtajzich/yowie-demo:dependency-tester",
         "network": "BRIDGE",
         "portMappings": [
           {"containerPort": 8080, "hostPort": 31104}
@@ -90,7 +90,7 @@ Content-Type: application/json
       "cpus": 1,
       "mem": 64,
       "container": {
-        "image": "vtajzich/yowie-dep-tester:v1",
+        "image": "vtajzich/yowie-demo:dependency-tester",
         "network": "BRIDGE",
         "portMappings": [
           {"containerPort": 8080, "hostPort": 31105}
@@ -109,7 +109,7 @@ Content-Type: application/json
       "cpus": 1,
       "mem": 64,
       "container": {
-        "image": "vtajzich/yowie-dep-tester:v1",
+        "image": "vtajzich/yowie-demo:dependency-tester",
         "network": "BRIDGE",
         "portMappings": [
           {"containerPort": 8080, "hostPort": 31106}

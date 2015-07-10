@@ -14,7 +14,7 @@ Content-Type: application/json
             "cpus": 0.5,
             "mem": 256,
             "container": {
-                "image": "vtajzich/yowie-demo_mysql",
+                "image": "vtajzich/yowie-demo:mysql",
                 "network": "HOST"
             },
             "env": {
@@ -32,7 +32,7 @@ Content-Type: application/json
             "cpus": 0.5,
             "mem": 128,
             "container": {
-                "image": "vtajzich/yowie-demo_movie-data-loader",
+                "image": "vtajzich/yowie-demo:movie-data-loader",
                 "network": "BRIDGE"
             },
             "env": {
@@ -51,7 +51,7 @@ Content-Type: application/json
             "cpus": 1,
             "mem": 128,
             "container": {
-                "image": "vtajzich/yowie-demo_movie-finder",
+                "image": "vtajzich/yowie-demo:movie-finder",
                 "network": "BRIDGE",
                 "portMappings": [
                     {
@@ -75,7 +75,7 @@ Content-Type: application/json
             "cpus": 0.5,
             "mem": 128,
             "container": {
-                "image": "vtajzich/yowie-demo_movie-tester",
+                "image": "vtajzich/yowie-demo:movie-tester",
                 "network": "BRIDGE"
             },
             "env": {

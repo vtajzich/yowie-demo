@@ -10,7 +10,7 @@ Content-Type: application/json
             "cpus": 0.5,
             "mem": 128,
             "container": {
-                "image": "vtajzich/yowie-demo_movie-data-loader",
+                "image": "vtajzich/yowie-demo:movie-data-loader",
                 "network": "BRIDGE"
             },
             "env": {
