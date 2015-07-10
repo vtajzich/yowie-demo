@@ -1,0 +1,22 @@
+POST http://docker:8080/groups
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "db",
+    "tasks": [
+        {
+            "name": "mysql",
+            "cpus": 0.5,
+            "mem": 256,
+            "container": {
+                "image": "vtajzich/yowie-demo_mysql",
+                "network": "HOST"
+            },
+            "env": {
+                "MYSQL_ROOT_PASSWORD": "Password1",
+                "DB_HOST": "docker"
+            }
+        }
+    ]
+}

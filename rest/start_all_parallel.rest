@@ -1,0 +1,80 @@
+POST http://docker:8080/groups
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "my-group-parallel",
+    "tasks": [
+        {
+            "name": "mysql",
+            "cpus": 0.5,
+            "mem": 256,
+            "container": {
+                "image": "vtajzich/yowie-demo_mysql",
+                "network": "HOST"
+            },
+            "env": {
+                "MYSQL_ROOT_PASSWORD": "Password1",
+                "DB_HOST": "docker"
+            }
+        },
+        {
+            "name": "movie-data-loader",
+            "cpus": 0.2,
+            "mem": 128,
+            "container": {
+                "image": "vtajzich/yowie-demo_movie-data-loader",
+                "network": "HOST"
+            },
+            "env": {
+                "DB_HOST": "docker",
+                "DB_USER": "root",
+                "DB_PASS": "Password1"
+            },
+            "dependsOn": {
+                "name": "mysql",
+                "status": "RUNNING"
+            }
+        },
+        {
+            "name": "movie-finder",
+            "cpus": 1,
+            "mem": 128,
+            "container": {
+                "image": "vtajzich/yowie-demo_movie-finder",
+                "network": "BRIDGE",
+                "portMappings": [
+                    {
+                        "containerPort": 8080,
+                        "hostPort": 31100
+                    }
+                ]
+            },
+            "env": {
+                "spring.datasource.url": "jdbc:mysql://docker/movie_app",
+                "spring.datasource.username": "vitek",
+                "spring.datasource.password": "Password1"
+            },
+            "dependsOn": {
+                "name": "mysql",
+                "status": "RUNNING"
+            }
+        },
+        {
+            "name": "movie-tester",
+            "cpus": 0.1,
+            "mem": 128,
+            "container": {
+                "image": "vtajzich/yowie-demo_movie-tester",
+                "network": "BRIDGE"
+            },
+            "env": {
+                "MOVIE_FINDER_URL": "http://docker:31100"
+            },
+            "dependsOn": {
+                "name": "mysql",
+                "status": "RUNNING"
+            }
+        }
+    ]
+}

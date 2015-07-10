@@ -1,0 +1,38 @@
+Yowie - Docker and Testing:
+        Vitek Tajzich
+        email: v.tajzich@gmail.com
+        twitter: @vitektajzich
+
+
+
+
+Yowie:
+ ☐ It's a mesos framework
+ ☐ Has REST API
+ ☐ Has web UI
+
+Why:
+
+Performace test must be:
+
+☐ Repeteable
+      ☐ Data in expected state
+      ☐ Running services available just for testing
+      ☐ Service can be run, stopped and again and again and again
+
+☐ Rigidly controlled
+     ☐ Services must be run in specified order
+     ☐ Stopped when test finishes
+     ☐ On specified machines
+     ☐ Alone to not affect or be affected
+     ☐ Data reverted
+
+☐ Measured
+     ☐ Collected
+     ☐ Stored
+     ☐ Visualised
+
+One more thing:
+ ☐ It’s open source ( https://github.com/vendavo/yowie )
+
+

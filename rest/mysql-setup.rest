@@ -1,0 +1,23 @@
+POST http://docker:8080/groups
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "data-loaders",
+    "tasks": [
+        {
+            "name": "mysql-data-loader",
+            "cpus": 0.5,
+            "mem": 128,
+            "container": {
+                "image": "vtajzich/yowie-demo_movie-data-loader",
+                "network": "BRIDGE"
+            },
+            "env": {
+                "DB_HOST": "docker",
+                "DB_USER": "root",
+                "DB_PASS": "Password1"
+            }
+        }
+    ]
+}

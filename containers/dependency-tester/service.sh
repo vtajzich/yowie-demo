@@ -1,0 +1,40 @@
+#!/bin/bash
+echo
+echo "Running"
+echo
+
+sleep 5
+
+echo "Calling YOWIE: ${YOWIE_STATUS_UPDATE_URL}SERVER_STARTED"
+
+curl -X PUT ${YOWIE_STATUS_UPDATE_URL}SERVER_STARTED
+
+sleep 10
+
+echo
+echo "Calling YOWIE: ${YOWIE_STATUS_UPDATE_URL}UP"
+
+curl -X PUT ${YOWIE_STATUS_UPDATE_URL}UP
+
+sleep 10
+
+echo
+echo "Calling YOWIE: ${YOWIE_STATUS_UPDATE_URL}STATE_1"
+
+curl -X PUT ${YOWIE_STATUS_UPDATE_URL}STATE_1
+
+sleep 10
+
+echo
+echo "Calling YOWIE: ${YOWIE_STATUS_UPDATE_URL}STATE_2"
+
+curl -X PUT ${YOWIE_STATUS_UPDATE_URL}STATE_2
+
+sleep 10
+
+echo
+echo "Calling YOWIE: ${YOWIE_STATUS_UPDATE_URL}STATE_3"
+
+curl -X PUT ${YOWIE_STATUS_UPDATE_URL}STATE_3
+
+sleep 5
