@@ -6,7 +6,7 @@ spring:
     hibernate.ddl-auto: validate
     
   datasource:
-    url: jdbc:mysql://10.211.55.14/movie_app
+    url: jdbc:mysql://docker/movie_app
     username: vitek
     password: Password1
     driver-class-name: com.mysql.jdbc.Driver
