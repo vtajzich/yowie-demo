@@ -5,7 +5,7 @@ ADD https://github.com/vtajzich/yowie-demo/releases/download/1.0.0/movie-finder.
 
 WORKDIR /home/app
 
-RUN tar -xvf /home/app && rm /home/app/movie-finder.tar
+RUN tar -xvf /home/app/movie-finder.tar && rm /home/app/movie-finder.tar
 
 EXPOSE 8080
 
