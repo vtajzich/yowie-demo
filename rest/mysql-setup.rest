@@ -14,7 +14,7 @@ Content-Type: application/json
                 "network": "BRIDGE"
             },
             "env": {
-                "DB_HOST": "docker",
+                "DB_HOST": "10.211.55.14",
                 "DB_USER": "root",
                 "DB_PASS": "Password1"
             }

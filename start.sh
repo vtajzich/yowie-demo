@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "Downloading images"
+
+docker pull vtajzich/yowie-demo:mysql
+docker pull vtajzich/yowie-demo:movie-data-loader
+docker pull vtajzich/yowie-demo:movie-finder
+docker pull vtajzich/yowie-demo:dependency-tester
+
 echo "Starting zookeeper"
 
 docker run -d \

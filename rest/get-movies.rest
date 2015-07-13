@@ -1,2 +1,2 @@
-GET http://docker:31100/dvd/title/like/pulp
+GET http://10.211.55.14:31100/dvd/title/like/pulp
 Accept: application/json
