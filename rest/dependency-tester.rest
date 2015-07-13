@@ -3,7 +3,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "group-1",
+  "name": "group of testers",
   "terminateTask": {
     "name": "dep-tester-2",
     "status": "STATE_1"
@@ -11,7 +11,7 @@ Content-Type: application/json
   "tasks": [
     {
       "name": "dep-tester-1",
-      "cpus": 1,
+      "cpus": 0.2,
       "mem": 64,
       "container": {
         "image": "vtajzich/yowie-demo:dependency-tester",
@@ -23,14 +23,11 @@ Content-Type: application/json
         "volumes": [
           {"containerPath": "/mnt/anything", "hostPath": "/mnt/something/else"}
          ]
-      },
-      "constraints": [
-        {"name": "name", "value": "mesos-slave-1"}
-      ]
+      }
     },
     {
       "name": "dep-tester-2",
-      "cpus": 1,
+      "cpus": 0.2,
       "mem": 64,
       "container": {
         "image": "vtajzich/yowie-demo:dependency-tester",
@@ -42,14 +39,11 @@ Content-Type: application/json
       "dependsOn": {
         "name": "dep-tester-1",
         "status": "UP"
-      },
-      "constraints": [
-        {"name": "name", "value": "mesos-slave-2"}
-      ]
+      }
     },
     {
       "name": "dep-tester-3",
-      "cpus": 1,
+      "cpus": 0.2,
       "mem": 64,
       "container": {
         "image": "vtajzich/yowie-demo:dependency-tester",
@@ -61,14 +55,11 @@ Content-Type: application/json
       "dependsOn": {
         "name": "dep-tester-2",
         "status": "STATE_1"
-      },
-      "constraints": [
-        {"name": "name", "value": "mesos-slave-3"}
-      ]
+      }
     },
     {
       "name": "dep-tester-4",
-      "cpus": 1,
+      "cpus": 0.2,
       "mem": 64,
       "container": {
         "image": "vtajzich/yowie-demo:dependency-tester",
@@ -80,14 +71,11 @@ Content-Type: application/json
       "dependsOn": {
         "name": "dep-tester-3",
         "status": "STATE_2"
-      },
-      "constraints": [
-        {"name": "name", "value": "mesos-slave-4"}
-      ]
+      }
     },
     {
       "name": "dep-tester-5",
-      "cpus": 1,
+      "cpus": 0.2,
       "mem": 64,
       "container": {
         "image": "vtajzich/yowie-demo:dependency-tester",
@@ -99,14 +87,11 @@ Content-Type: application/json
       "dependsOn": {
         "name": "dep-tester-1",
         "status": "UP"
-      },
-      "constraints": [
-        {"name": "name", "value": "mesos-slave-1"}
-      ]
+      }
     },
     {
       "name": "dep-tester-6",
-      "cpus": 1,
+      "cpus": 0.2,
       "mem": 64,
       "container": {
         "image": "vtajzich/yowie-demo:dependency-tester",
@@ -118,10 +103,7 @@ Content-Type: application/json
       "dependsOn": {
         "name": "dep-tester-3",
         "status": "UP"
-      },
-      "constraints": [
-        {"name": "name", "value": "mesos-slave-2" }
-      ]
+      }
     }
   ]
 }
